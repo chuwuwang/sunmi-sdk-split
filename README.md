@@ -1,2 +1,2 @@
 # sunmi-sdk-split
-SUNMI EMV Split
+SUNMI SDK demo for EMV L2 Split.
