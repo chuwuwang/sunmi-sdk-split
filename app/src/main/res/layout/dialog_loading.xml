@@ -23,8 +23,8 @@
         android:layout_marginTop="4dp"
         android:ellipsize="end"
         android:gravity="center_horizontal"
-        android:text="@string/loading"
-        android:textColor="@color/colorTextTitle"
+        android:text="Loading"
+        android:textColor="#222222"
         android:textSize="18sp" />
 
 </LinearLayout>
