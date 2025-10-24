@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleSize"
+        android:elevation="4dp"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/nlk_save_mksk_key"
+                layout="@layout/common_item" />
+
+            <include
+                android:id="@+id/nlk_get_kcv"
+                layout="@layout/common_item" />
+
+            <include
+                android:id="@+id/nlk_mksk_data_encrypt"
+                layout="@layout/common_item" />
+
+            <include
+                android:id="@+id/nlk_mksk_data_decrypt"
+                layout="@layout/common_item" />
+
+            <include
+                android:id="@+id/nlk_delete_key"
+                layout="@layout/common_item"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/nlk_rsa_test"
+                layout="@layout/common_item" />
+
+            <include
+                android:id="@+id/nlk_rsa_recover"
+                layout="@layout/common_item" />
+
+            <include
+                android:id="@+id/nlk_ecc_test"
+                layout="@layout/common_item" />
+
+            <include
+                android:id="@+id/nlk_ecc_recover"
+                layout="@layout/common_item" />
+
+            <include
+                android:id="@+id/nlk_cert_test"
+                layout="@layout/common_item" />
+
+            <include
+                android:id="@+id/nlk_sm2_test"
+                layout="@layout/common_item" />
+
+            <include
+                android:id="@+id/nlk_sm2_recover"
+                layout="@layout/common_item" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

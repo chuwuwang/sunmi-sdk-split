@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.sm.sdk.demo.view.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="$0.00"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemSize"
+            android:gravity="center"
+            android:hint="Enter your card PIN"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_pin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemSize"
+            android:gravity="center"
+            android:hint="Enter PIN"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_remain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itemSize"
+            android:gravity="center"
+            android:text="Invalid PIN. %1$s attempts left"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_k0"
+                    style="@style/key_board_text_clip"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/tv_k1"
+                    style="@style/key_board_text_clip"
+                    android:layout_marginStart="@dimen/clip_keyboard_divider"
+                    android:text="2" />
+
+                <TextView
+                    android:id="@+id/tv_k2"
+                    style="@style/key_board_text_clip"
+                    android:layout_marginStart="@dimen/clip_keyboard_divider"
+                    android:text="3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/clip_keyboard_divider"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_k3"
+                    style="@style/key_board_text_clip"
+                    android:text="4" />
+
+                <TextView
+                    android:id="@+id/tv_k4"
+                    style="@style/key_board_text_clip"
+                    android:layout_marginStart="@dimen/clip_keyboard_divider"
+                    android:text="5" />
+
+                <TextView
+                    android:id="@+id/tv_k5"
+                    style="@style/key_board_text_clip"
+                    android:layout_marginStart="@dimen/clip_keyboard_divider"
+                    android:text="6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/clip_keyboard_divider"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_k6"
+                    style="@style/key_board_text_clip"
+                    android:text="7" />
+
+                <TextView
+                    android:id="@+id/tv_k7"
+                    style="@style/key_board_text_clip"
+                    android:layout_marginStart="@dimen/clip_keyboard_divider"
+                    android:text="8" />
+
+                <TextView
+                    android:id="@+id/tv_k8"
+                    style="@style/key_board_text_clip"
+                    android:layout_marginStart="@dimen/clip_keyboard_divider"
+                    android:text="9" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/clip_keyboard_divider"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_del_clip" />
+
+                <TextView
+                    android:id="@+id/tv_k9"
+                    style="@style/key_board_text_clip"
+                    android:layout_marginStart="@dimen/clip_keyboard_divider"
+                    android:text="0" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/clip_keyboard_divider"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_confirm_clip" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

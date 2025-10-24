@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/colorAccent"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/basic_kb_backlight" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/mb_open"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/itemSize"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:text="@string/open"
+                            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:backgroundTint="@color/colorOrange"
+                            app:cornerRadius="4dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/mb_close"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/itemSize"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:text="@string/close"
+                            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:backgroundTint="@color/colorOrange"
+                            app:cornerRadius="4dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorLineColor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/mb_get_brightness"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/itemSize"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:text="@string/basic_kb_get_brightness"
+                            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:backgroundTint="@color/colorOrange"
+                            app:cornerRadius="4dp" />
+
+                        <TextView
+                            android:id="@+id/tv_brightness"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="@string/basic_kb_brightness"
+                            android:textSize="16sp"
+                            app:chipBackgroundColor="#00CC33"
+                            app:chipCornerRadius="16dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorLineColor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/mb_set_brightness"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/itemSize"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:text="@string/basic_kb_set_brightness"
+                            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:backgroundTint="@color/colorOrange"
+                            app:cornerRadius="4dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_brightness"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/basic_kb_brightness"
+                                android:inputType="number"
+                                android:textColor="@color/colorTextContent"
+                                android:textColorHint="@color/colorTextHelp"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
