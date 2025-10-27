@@ -21,6 +21,9 @@ import com.sm.sdk.demo.scan.ScanActivity;
 import com.sm.sdk.demo.security.SecurityActivity;
 import com.sm.sdk.demo.tax.TaxTestActivity;
 import com.sm.sdk.demo.utils.DeviceUtil;
+import com.sm.sdk.demo.utils.LogUtil;
+
+import java.io.File;
 
 public class MainActivity extends BaseAppCompatActivity {
 
@@ -32,8 +35,17 @@ public class MainActivity extends BaseAppCompatActivity {
     }
 
     private void initView() {
+        String path = getApplicationInfo().nativeLibraryDir;
+        LogUtil.e("ktx", path);
+        File file = new File(path);
+        if (file.exists()) {
+            String[] list = file.list();
+            for (String name : list) {
+                LogUtil.e("ktx", name);
+            }
+        }
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("SunmiSDKTestDemo");
+        toolbar.setTitle("EmvL2 Split Demo");
 
         findViewById(R.id.card_view_basic).setOnClickListener(this);
         findViewById(R.id.card_view_card).setOnClickListener(this);
